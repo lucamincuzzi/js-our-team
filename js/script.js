@@ -1,3 +1,4 @@
+//Creazione dell'array di oggetti dei membri del team
 const teamMembers = [
     {
         name: "Wayne Barnett",
@@ -30,4 +31,16 @@ const teamMembers = [
         photo: "barabara-ramos-graphic-designer.jpg"
     }
 ]
-console.log(teamMembers);
+console.log("Array dei membri del team", teamMembers);
+
+//stampa in console del nome, ruolo e stringa della foto
+for(let i = 0; i < teamMembers.length; i++) {
+    //salvo in una variabile l'oggetto nell'array in iterazione
+    curTeamMember = teamMembers[i];
+    //per ogni oggetto, stampo in console il valore della chiave corrispondente
+    console.log(curTeamMember.name);
+    console.log(curTeamMember.role);
+    console.log(curTeamMember.photo);
+    //ausilio visivo per separare i membri in console
+    console.log("-------------");
+}
