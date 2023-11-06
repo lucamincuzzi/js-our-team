@@ -33,8 +33,8 @@ const teamMembers = [
 ]
 console.log("Array dei membri del team", teamMembers);
 
-//stampa in console del nome, ruolo e stringa della foto
 for(let i = 0; i < teamMembers.length; i++) {
+    //stampa in console del nome, ruolo e stringa della foto
     //salvo in una variabile l'oggetto nell'array in iterazione
     curTeamMember = teamMembers[i];
     //per ogni oggetto, stampo in console il valore della chiave corrispondente
@@ -43,4 +43,9 @@ for(let i = 0; i < teamMembers.length; i++) {
     console.log(curTeamMember.photo);
     //ausilio visivo per separare i membri in console
     console.log("-------------");
+    //stampa in DOM dei suddetti valori
+    //salvo in una variabile l'elemento unordered list
+    const membersList = document.querySelector(".team-members");
+    //inserisco ad ogni iterazione una stringa <li></li> contenente i valori in iterazione
+    membersList.innerHTML += `<li>Nome: ${curTeamMember.name} | Ruolo: ${curTeamMember.role} | Percorso foto: ${curTeamMember.photo}`
 }
